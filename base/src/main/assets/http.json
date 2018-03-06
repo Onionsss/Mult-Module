@@ -1,0 +1,29 @@
+[
+  {
+    "moduleName":"home",
+    "baseUrl":"https://uhuishou.ronghezulin.com/loan-app/",
+    "interceptor":"com.onion.home.HeaderInterceptor",
+    "netInterceptor":"",
+    "connectTimeout":100,
+    "readTimeout":100,
+    "writeTimeout":100
+  },
+  {
+    "moduleName":"message",
+    "baseUrl":"https://uhuishou.ronghezulin.com/loan-app/1/",
+    "interceptor":"",
+    "netInterceptor":"",
+    "connectTimeout":200,
+    "readTimeout":200,
+    "writeTimeout":200
+  },
+  {
+    "moduleName":"taxi",
+    "baseUrl":"https://uhuishou.ronghezulin.com/loan-app/",
+    "interceptor":"",
+    "netInterceptor":"",
+    "connectTimeout":200,
+    "readTimeout":200,
+    "writeTimeout":200
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "moduleName":"taxi",
+    "baseUrl":"https://uhuishou.ronghezulin.com/loan-app/",
+    "interceptor":"",
+    "netInterceptor":"",
+    "connectTimeout":200,
+    "readTimeout":200,
+    "writeTimeout":200
+  }
+]

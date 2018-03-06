@@ -1,0 +1,36 @@
+ext{
+    /**
+     * 第三方的秘钥配置
+     */
+
+    /**
+     * 热修复 正式环境
+     */
+    aliyun_hotfit_rsa = "\"MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCDg67/bUfwJd+PwmLB+Q+4n6MxccwunHSwRlVf7Q1c2GnbbNHfussaRYY2Jqt0KMWV3iCNky/L6uHG6nrvfgULEF0Bnkvd16hEBf3WZKVgR/80HJmism3GWHkwmEqY+aoK+VCslr/741MHcKZ99mYCc74rxcv9YGxiXga+HQd071ItOSPWT+fNVbkcjwhZilRhddXwQ1uMsgMj4cIPYG6bYC93H5t4jXssS5+lixd9foCRRV96CmurROe4KptOWWqPNM8VGYVh8BMYSEZnZdJCYu15FFQ7zoC6KosrXcVJqSieXUfNmpYhgXM3wtTgrEHnx/YYlpSg9iMtcV0AVA4zAgMBAAECggEAb4441/OzrNIDc+c4bD8/BaVsAVn9D6CpHolai/cBebsc+AKzd+rzs0I8GRzuHKclCv4TcOPkDD4d6+QkCZhE4OCtc9z5j6EJ20GV0tEmsqf/ow2LiMV/dlq/2eekh2Rnx805kFyDVz+5wzrcD0b9uqDBNFIgubmb1kjZwVPQanAJNX9Ktbivxg7RrpzHWtXzGCHVxjfF7MqohdJcZ4fEoq8BLGSddCRq/XigUsLCjBeyRDoTCOZJkh3JK8Mw+1uyleSUK9tbt6IUDblmMxOOj3AH0caKjG9+Sr10XO4KMOhFMBXNCbKpqPjgLJq8oGVlKWKVfJJPLvkVdiELwQPbaQKBgQDOisM/pU1r/s19GDFLj3Yep71wuOhyODXjpcdGO3rGg+j4JNr2w+7djZgeLl/oPX77Xm4ZJuZ7W9cwHG7PRC4Erpq3UlPEC3puGLvxahiOBPBykdpgkaKuf0eBPMFt6uBMCDGwc9eQeS+p/D+lt24qYtsweQkjQHwCqoeg0AKqVwKBgQCjAaZB4/z7nxaM6+EBQS2iffcgPvgo6zEpDhqxylO1Jkgl/ssMJBXxA3UFRRHg2qYXy+cDe39m/EcnMhd/sck6Pd4TuYvNb23b2snZ8wBdG33Iyh7noJCYVFqhvHWwwTc3iPHQxy8eoxS/+V2g/jZ2nDRj9oZPjlVBwkpH4N+JhQKBgGmOtZbTjqwA/1hNgvQRD9c+9yyi8/lcDP6ZfSzBvU+znt8jRt0S6gNFGFdkcBOrSjiB3FbycJzfJS0ret5nA/XUnrHOW404KIwYDAWnqYD7uT90l1z/UVtJJWxBdsIMZjG1hl+d9K+bn+aKSqURCDaVa1xsn2Tq0fYy3Tos1Q/lAoGAeXl2M646Ti1dOcFimXPAFVK4AlDK0HuM1CKNpCa6QMn5hE8fc7nEnCpOX5H8Y8utcRhj3MWAyPeB8uSyfFe6NOv7/kkMtRiwDuI6AHDFuZ0OHL77TvPqLYrXS6ZNMl6azokAY+y74aH4iaPEsYAgiD2aEVCbANh6Epo+jtg23Z0CgYEAi6dDUbt2GnY7dPuI4mt9UM/KroU3XkRLviAlDvpyxSy73Xmnx9DmFl3KuJwtnwR2SaXyHY87gY8wnEU2Opn6CYX+tiXe7Ix5GbHL8tbW0iFJysCpX9tQ9CN32pqUeI3XUrq0JPYE8IA4+ZTGOAoRv/53I/S9rtXFLAY8Gp2aa8I=\""
+    aliyun_hotfit_AppId = "\"24709013-1\""
+    aliyun_hotfit_AppSecret = "\"f6e6729e53a7f9ba8b3ac45adb60f5b9\""
+    /**
+     * 热修复 测试环境
+     */
+    aliyun_hotfit_rsa_debug = "\"MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCDg67/bUfwJd+PwmLB+Q+4n6MxccwunHSwRlVf7Q1c2GnbbNHfussaRYY2Jqt0KMWV3iCNky/L6uHG6nrvfgULEF0Bnkvd16hEBf3WZKVgR/80HJmism3GWHkwmEqY+aoK+VCslr/741MHcKZ99mYCc74rxcv9YGxiXga+HQd071ItOSPWT+fNVbkcjwhZilRhddXwQ1uMsgMj4cIPYG6bYC93H5t4jXssS5+lixd9foCRRV96CmurROe4KptOWWqPNM8VGYVh8BMYSEZnZdJCYu15FFQ7zoC6KosrXcVJqSieXUfNmpYhgXM3wtTgrEHnx/YYlpSg9iMtcV0AVA4zAgMBAAECggEAb4441/OzrNIDc+c4bD8/BaVsAVn9D6CpHolai/cBebsc+AKzd+rzs0I8GRzuHKclCv4TcOPkDD4d6+QkCZhE4OCtc9z5j6EJ20GV0tEmsqf/ow2LiMV/dlq/2eekh2Rnx805kFyDVz+5wzrcD0b9uqDBNFIgubmb1kjZwVPQanAJNX9Ktbivxg7RrpzHWtXzGCHVxjfF7MqohdJcZ4fEoq8BLGSddCRq/XigUsLCjBeyRDoTCOZJkh3JK8Mw+1uyleSUK9tbt6IUDblmMxOOj3AH0caKjG9+Sr10XO4KMOhFMBXNCbKpqPjgLJq8oGVlKWKVfJJPLvkVdiELwQPbaQKBgQDOisM/pU1r/s19GDFLj3Yep71wuOhyODXjpcdGO3rGg+j4JNr2w+7djZgeLl/oPX77Xm4ZJuZ7W9cwHG7PRC4Erpq3UlPEC3puGLvxahiOBPBykdpgkaKuf0eBPMFt6uBMCDGwc9eQeS+p/D+lt24qYtsweQkjQHwCqoeg0AKqVwKBgQCjAaZB4/z7nxaM6+EBQS2iffcgPvgo6zEpDhqxylO1Jkgl/ssMJBXxA3UFRRHg2qYXy+cDe39m/EcnMhd/sck6Pd4TuYvNb23b2snZ8wBdG33Iyh7noJCYVFqhvHWwwTc3iPHQxy8eoxS/+V2g/jZ2nDRj9oZPjlVBwkpH4N+JhQKBgGmOtZbTjqwA/1hNgvQRD9c+9yyi8/lcDP6ZfSzBvU+znt8jRt0S6gNFGFdkcBOrSjiB3FbycJzfJS0ret5nA/XUnrHOW404KIwYDAWnqYD7uT90l1z/UVtJJWxBdsIMZjG1hl+d9K+bn+aKSqURCDaVa1xsn2Tq0fYy3Tos1Q/lAoGAeXl2M646Ti1dOcFimXPAFVK4AlDK0HuM1CKNpCa6QMn5hE8fc7nEnCpOX5H8Y8utcRhj3MWAyPeB8uSyfFe6NOv7/kkMtRiwDuI6AHDFuZ0OHL77TvPqLYrXS6ZNMl6azokAY+y74aH4iaPEsYAgiD2aEVCbANh6Epo+jtg23Z0CgYEAi6dDUbt2GnY7dPuI4mt9UM/KroU3XkRLviAlDvpyxSy73Xmnx9DmFl3KuJwtnwR2SaXyHY87gY8wnEU2Opn6CYX+tiXe7Ix5GbHL8tbW0iFJysCpX9tQ9CN32pqUeI3XUrq0JPYE8IA4+ZTGOAoRv/53I/S9rtXFLAY8Gp2aa8I=\""
+    aliyun_hotfit_AppId_debug = "\"24709013-1\""
+    aliyun_hotfit_AppSecret_debug = "\"f6e6729e53a7f9ba8b3ac45adb60f5b9\""
+
+    /**
+     * 友盟 正式环境
+     */
+    youmeng = "\"58d0f3dd9f06fd594a0001ae\""
+    /**
+     * 友盟 测试环境
+     */
+    youmeng_debug = "\"58d0f3dd9f06fd594a0001ae\""
+
+    /**
+     * 推送 正式环境
+     */
+    push_appkey_release = "d7386be108046f72cc0b0fb5"
+    /**
+     * 推送 测试环境
+     */
+    push_appkey_debug = "6f99ba9f6ef3e7164349cc25"
+}
