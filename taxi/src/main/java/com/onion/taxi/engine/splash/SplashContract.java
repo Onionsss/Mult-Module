@@ -13,10 +13,8 @@ public interface SplashContract {
         void getCodeSuccess(String code);
     }
 
-    interface Presenter extends IBasePresenter<SplashContract.View>{
-
+    interface Presenter extends IBasePresenter<View>{
         void getCode();
-
     }
 
 }

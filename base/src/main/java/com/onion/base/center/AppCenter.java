@@ -8,6 +8,8 @@ import com.onion.base.di.component.AppComponent;
 import com.onion.base.di.component.DaggerAppComponent;
 import com.onion.base.di.module.AppModule;
 import com.onion.base.di.module.HttpModule;
+import com.onion.base.di.module.RxModule;
+import com.onion.base.di.module.repositorymodule.RepositoryModule;
 import com.onion.util.logger.MyLogger;
 
 import java.util.LinkedList;
@@ -48,6 +50,8 @@ public class AppCenter extends MultiDexApplication {
             appComponent = DaggerAppComponent.builder()
                     .appModule(new AppModule(mInstance))
                     .httpModule(new HttpModule())
+                    .rxModule(new RxModule())
+                    .repositoryModule(new RepositoryModule())
                     .build();
         }
         return appComponent;

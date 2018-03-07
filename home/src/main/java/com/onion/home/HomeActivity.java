@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
@@ -48,28 +47,25 @@ public class HomeActivity extends AppCompatActivity{
         user.setName("张琦");
         binding.setUser(user);
 
-        binding.tv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("TAG", "onClick: ");
-                Retrofit home = mHttpRepository.getRepository("home");
-                HomeApi homeApi = home.create(HomeApi.class);
-                HttpLogger.setOpenFlag(true);
-                homeApi.getCity().enqueue(new Callback<City>() {
-                    @Override
-                    public void onResponse(Call<City> call, Response<City> response) {
-                        Log.d("TAG", "onResponse: "+new Gson().toJson(response.body()));
+        binding.tv.setOnClickListener(v -> {
+            Log.d("TAG", "onClick: ");
+            Retrofit home = mHttpRepository.getRepository("home");
+            HomeApi homeApi = home.create(HomeApi.class);
+            HttpLogger.setOpenFlag(true);
+            homeApi.getCity().enqueue(new Callback<City>() {
+                @Override
+                public void onResponse(Call<City> call, Response<City> response) {
+                    Log.d("TAG", "onResponse: "+new Gson().toJson(response.body()));
 
-                        ARouter.getInstance().build(RouterPath.TAXI_SPLASH).navigation();
-                    }
+                    ARouter.getInstance().build(RouterPath.TAXI_SPLASH).navigation();
+                }
 
-                    @Override
-                    public void onFailure(Call<City> call, Throwable t) {
-                        Log.d("TAG", "onResponse: "+t.toString());
+                @Override
+                public void onFailure(Call<City> call, Throwable t) {
+                    Log.d("TAG", "onResponse: "+t.toString());
 
-                    }
-                });
-            }
+                }
+            });
         });
 
         ActivityComponent.getInstance().inject(this);

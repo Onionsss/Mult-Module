@@ -34,6 +34,5 @@ public class Test extends BaseActivity implements SplashContract.View{
 
     @Override
     public void getCodeSuccess(String code) {
-        showMessage(code);
     }
 }

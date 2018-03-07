@@ -1,5 +1,7 @@
 package com.onion.taxi.engine.splash;
 
+import android.util.Log;
+
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.onion.base.RouterPath;
 import com.onion.base.mvp.IBasePresenter;
@@ -28,8 +30,7 @@ public class SplashActivity extends BaseActivity implements SplashContract.View{
     @Override
     protected void initView() {
         setContentView(R.layout.taxi_activity_main);
-
-        mPresenter.getCode();
+        findViewById(R.id.tv).setOnClickListener(v -> mPresenter.getCode());
     }
 
     @Override
@@ -39,6 +40,6 @@ public class SplashActivity extends BaseActivity implements SplashContract.View{
 
     @Override
     public void getCodeSuccess(String code) {
-        showMsg(code);
+        Log.d("zhangqi", "getCodeSuccess: "+code);
     }
 }

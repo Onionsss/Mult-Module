@@ -5,6 +5,8 @@ import com.onion.base.center.AppCenter;
 import com.onion.base.di.module.AppModule;
 import com.onion.base.di.module.HttpModule;
 import com.onion.base.di.module.RxModule;
+import com.onion.base.di.module.repositorymodule.RepositoryModule;
+import com.onion.base.repository.impl.TaxiRepositoryImpl;
 import com.onion.http.HttpRepository;
 
 import javax.inject.Singleton;
@@ -24,7 +26,7 @@ import io.reactivex.disposables.CompositeDisposable;
  * RxModule  rxjava层
  */
 @Singleton
-@Component(modules = {AppModule.class,HttpModule.class, RxModule.class})
+@Component(modules = {AppModule.class,HttpModule.class, RxModule.class, RepositoryModule.class})
 public interface AppComponent {
 
     AppCenter getContext();
@@ -34,4 +36,8 @@ public interface AppComponent {
     HttpRepository getHttpRepository();
 
     CompositeDisposable getCompositedisposable();
+
+    TaxiRepositoryImpl getTaxiRepositoryImpl();
+
+//    TaxiApi getTaxiApi();
 }
