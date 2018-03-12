@@ -1,13 +1,20 @@
 package com.onion.taxi.engine.splash;
 
-import android.util.Log;
+import android.databinding.DataBindingUtil;
+import android.graphics.Color;
+import android.graphics.drawable.AnimatedVectorDrawable;
+import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.onion.base.RouterPath;
+import com.onion.base.center.AppCenter;
+import com.onion.base.di.module.ActivityModule;
 import com.onion.base.mvp.IBasePresenter;
 import com.onion.base.ui.BaseActivity;
 import com.onion.taxi.R;
-import com.onion.taxi.di.ActivityComponent;
+import com.onion.taxi.databinding.TaxiActivityMainBinding;
+import com.onion.taxi.di.DaggerActivityComponent;
+import com.onion.util.StatusBarUtil;
 
 import javax.inject.Inject;
 
@@ -18,19 +25,33 @@ import javax.inject.Inject;
 public class SplashActivity extends BaseActivity implements SplashContract.View{
 
     @Inject
-    SplashPresenter mPresenter;
+    SplashContract.Presenter mPresenter;
 
     @Override
     protected void inJect() {
-        ActivityComponent
-                .getInstance()
+        DaggerActivityComponent
+                .builder()
+                .appComponent(AppCenter.getAppComponent())
+                .activityModule(new ActivityModule(this))
+                .build()
                 .inject(this);
     }
 
     @Override
     protected void initView() {
-        setContentView(R.layout.taxi_activity_main);
-        findViewById(R.id.tv).setOnClickListener(v -> mPresenter.getCode());
+        TaxiActivityMainBinding taxi = DataBindingUtil.setContentView(this, R.layout.taxi_activity_main);
+        StatusBarUtil.StatusBarLightMode(this);
+        StatusBarUtil.setColor(this, Color.WHITE,0);
+
+        AnimatedVectorDrawable drawable = (AnimatedVectorDrawable) getResources().getDrawable(R.drawable.splash_logo_anim);
+        taxi.splashImg.setImageDrawable(drawable);
+        taxi.splashImg.postDelayed(() -> {
+            drawable.start();
+            taxi.splashImg.setVisibility(View.VISIBLE);
+            taxi.splashTv.setVisibility(View.VISIBLE);
+        },1000);
+
+        mPresenter.getCode();
     }
 
     @Override
@@ -40,6 +61,6 @@ public class SplashActivity extends BaseActivity implements SplashContract.View{
 
     @Override
     public void getCodeSuccess(String code) {
-        Log.d("zhangqi", "getCodeSuccess: "+code);
+        showMsg(code);
     }
 }

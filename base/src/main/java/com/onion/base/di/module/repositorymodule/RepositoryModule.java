@@ -27,5 +27,5 @@ public class RepositoryModule {
     public TaxiApi providesTaxiApi(TaxiRepositoryImpl taxiRepository){
         return taxiRepository.getApi();
     }
-    
+
 }

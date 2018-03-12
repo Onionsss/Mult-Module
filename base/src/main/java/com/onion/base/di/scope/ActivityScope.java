@@ -3,7 +3,6 @@ package com.onion.base.di.scope;
 import java.lang.annotation.Retention;
 
 import javax.inject.Scope;
-import javax.inject.Singleton;
 
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
@@ -12,7 +11,6 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  */
 
 @Scope
-@Singleton
 @Retention(RUNTIME)
 public @interface ActivityScope {
 

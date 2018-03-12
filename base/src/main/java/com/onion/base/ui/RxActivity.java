@@ -46,8 +46,8 @@ public abstract class RxActivity extends MessageActivity implements IBaseView{
         mIBasePresenter = iBasePresenter;
         if(iBasePresenter != null){
             iBasePresenter.attachView(this);
+            mCompositeSubscription = iBasePresenter.getCompositeDisposable();
         }
-        mCompositeSubscription = iBasePresenter.getCompositeDisposable();
     }
 
     protected abstract IBasePresenter getPresenter();

@@ -1,8 +1,10 @@
 package com.onion.taxi.engine;
 
+import com.onion.base.center.AppCenter;
+import com.onion.base.di.module.ActivityModule;
 import com.onion.base.mvp.IBasePresenter;
 import com.onion.base.ui.BaseActivity;
-import com.onion.taxi.di.ActivityComponent;
+import com.onion.taxi.di.DaggerActivityComponent;
 import com.onion.taxi.engine.splash.SplashContract;
 import com.onion.taxi.engine.splash.SplashPresenter;
 
@@ -24,7 +26,12 @@ public class Test extends BaseActivity implements SplashContract.View{
 
     @Override
     protected void inJect() {
-        ActivityComponent.getInstance().inject(this);
+        DaggerActivityComponent
+                .builder()
+                .appComponent(AppCenter.getAppComponent())
+                .activityModule(new ActivityModule(this))
+                .build()
+                .inject(this);
     }
 
     @Override

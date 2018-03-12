@@ -29,7 +29,11 @@ public abstract class TaxiRepository extends RepositoryImpl<TaxiApi> {
 
     @Override
     public TaxiApi getApiFromModuleName(String moduleName) {
-        return mHttpRepository.getRepository(moduleName).create(TaxiApi.class);
+        if(mApi == null){
+            return mHttpRepository.getRepository(moduleName).create(TaxiApi.class);
+        }else{
+            return mApi;
+        }
     }
 
 }

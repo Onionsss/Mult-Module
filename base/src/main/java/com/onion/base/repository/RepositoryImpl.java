@@ -17,7 +17,7 @@ public abstract class RepositoryImpl<A> implements IRepository<A>{
     public RepositoryImpl(HttpRepository httpRepository){
         mHttpRepository = httpRepository;
 
-        mApi = (A) getApiFromModuleName(getModuleName());
+        mApi = getApiFromModuleName(getModuleName());
     }
 
     @Override

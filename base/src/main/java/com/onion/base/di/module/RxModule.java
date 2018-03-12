@@ -1,5 +1,7 @@
 package com.onion.base.di.module;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 import io.reactivex.disposables.CompositeDisposable;
@@ -10,6 +12,7 @@ import io.reactivex.disposables.CompositeDisposable;
 @Module
 public class RxModule {
 
+    @Singleton
     @Provides
     public CompositeDisposable providesCom(){
         return new CompositeDisposable();

@@ -1,9 +1,11 @@
 package com.onion.taxi.di;
 
-import com.onion.base.center.AppCenter;
+import android.app.Activity;
+
 import com.onion.base.di.component.AppComponent;
 import com.onion.base.di.module.ActivityModule;
 import com.onion.base.di.scope.ActivityScope;
+import com.onion.taxi.di.module.EngineModule;
 import com.onion.taxi.engine.Test;
 import com.onion.taxi.engine.splash.SplashActivity;
 
@@ -17,22 +19,12 @@ import dagger.Component;
  */
 
 @ActivityScope
-@Component(dependencies = AppComponent.class, modules = ActivityModule.class)
-public abstract class ActivityComponent {
+@Component(dependencies = AppComponent.class, modules = {ActivityModule.class, EngineModule.class})
+public interface ActivityComponent {
 
-    private static ActivityComponent sComponent;
+    Activity getActivity();
 
-    public static ActivityComponent getInstance(){
-        if (sComponent == null){
-            sComponent = DaggerActivityComponent
-                    .builder()
-                    .appComponent(AppCenter.getAppComponent())
-                    .build();
-        }
-        return sComponent;
-    }
+    void inject(SplashActivity homeActivity);
 
-    public abstract void inject(SplashActivity homeActivity);
-
-    public abstract void inject(Test test);
+    void inject(Test test);
 }

@@ -2,10 +2,10 @@ package com.onion.taxi.engine.splash;
 
 import com.google.gson.Gson;
 import com.onion.base.mvp.impl.RxPresenter;
+import com.onion.base.repository.impl.TaxiRepositoryImpl;
 import com.onion.base.rxjava.Result;
 import com.onion.base.rxjava.T;
 import com.onion.pojo.City;
-import com.onion.base.repository.impl.TaxiRepositoryImpl;
 
 import javax.inject.Inject;
 
@@ -18,8 +18,8 @@ import io.reactivex.disposables.CompositeDisposable;
 public class SplashPresenter extends RxPresenter<SplashContract.View,TaxiRepositoryImpl> implements SplashContract.Presenter{
 
     @Inject
-    SplashPresenter(CompositeDisposable compositeDisposable,TaxiRepositoryImpl taxiRepository) {
-        super(compositeDisposable,taxiRepository);
+    public SplashPresenter(CompositeDisposable compositeDisposable, TaxiRepositoryImpl repository) {
+        super(compositeDisposable, repository);
     }
 
     @Override
